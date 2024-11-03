@@ -49,3 +49,64 @@ An example of how I have used public key cryptography today:
 
 - Chatting with my friend in Whatsapp
 - When I sent the message, it got encrypted asymmetrically. The message was mixed up using m friend's magic lock (public key) before it got sent over the internet. My friend decrypted it with matching private key. ([Nayak, A, 8.2.2024: Asymmetric Encryption — Whatsapp mechanism](https://medium.com/@anoopnayak1/asymmetric-encryption-whatsapp-mechanism-79d1821e765c#:~:text=When%20you%20send%20a%20message,can%20unlock%20and%20read%20it.))
+
+## b) Messaging
+
+I was able to use PGP to encrypt, send and decrypt the message. Here's a picture to proof:
+
+![Decrypted message](decrypted.png)
+
+## c) Other tool
+
+I used OpenSSL. Satu sent a message to Bob and Bob responded. Here's all the steps I took:
+
+1. I used OpenSSL's genrsa command to generate a 1024-bit public/private key pair for both, Satu and Bob.
+2. I extracted public keys from both parties into a file, satu_public.pem and bob_public.pem. Private keys were kept secret.
+3. Satu and Bob shared their public keys with each other. I used `scp` command for this
+4. Satu had a message for Bob in a text file (top_secret.txt), she encrypted it with Bob's public key and saved it in separated file (top_secret.enc). She also deleted the original text file to be sure.
+5. Satu sent the encrypted message to Bob (used `scp` again for this)
+6. Bob received the message, decrypted it with his private key so he was able to see it:
+
+![Satu to Bob](Satu_to_Bob.png)
+
+7. Bob wanted to respond, so he wrote his message into reply_secret.txt file, encrypted it with Satu's public key and stored it into reply_secret.enc file, also deleted the original message file. Then he sent it to Satu:
+
+![Bob to Satu](Bob_to_Satu.png)
+
+8. Satu received the response, decrypted it with her private key and was able to read it:
+
+![Decrypted message](openssl_decrypted.png)
+
+My comments: I feel like OpenSSL is very safe tool to encrypt the files. Additional layer of security was a passphrase that was created when the key pair got created. Whenever the private key was being used, the passphrase was needed to input first. My only worry is the step when the public keys get sent to each other, someone could perhaps steal it and decrypt the messages.
+
+Reference: [Kamathe, G, 29.4.2021: Encrypting and decrypting files with OpenSSL](https://opensource.com/article/21/4/encryption-decryption-openssl)
+
+## d) Eve and Mallory
+
+PGP protecting against passive eavesdroppers and active interferers:
+
+1. Eve, Passive eavesdropper
+
+- Symmetric encryption is being used for message content and asymmetric encryption for the session key => Only the intended recipient will be able to read the content
+- Every user has a public and a private key => secure transmission of messages withot exposing the content
+
+2. Mallory, Active interferer
+
+- Message's integrity and authenticity can be verified with digital signatures => signature won't validate if altered
+- Modifications of the messages can be marked with hash functions => will notice if some unwanted modifications happen
+
+Reference: OpenAI's ChatGPT. (2023). Explanation of PGP security mechanisms. Accessed: 3.11.2024.
+
+## f) Password management (e part missing?)
+
+I used KeePass XC since I've been using it in the past.
+
+1. Download KeePass from their website
+2. Open the app, create a database and add a strong password. This password should be long and hard to guess since all the rest of the passwords will be stored behind it in the system. :)
+3. By clicking "Add entry" you can store new passwords. If you click the dice in the password field, KeePass XC gives you a random password with the rules you want.
+4. After adding the passwords in the system you only need to rememeber the password to the KeePass XC and all the other services can have secure, hard-to-guess and rather unique passwords.
+
+A couple of benefits came to my mind:
+
+- With password manager, the passwords can be long and complicated since the user does not need to remember it. Also this way user won't use his/her personal information as a part of the password, such as birthdate or phone number etc. This makes password guessing harder for attacker
+- If the passwords weren't different in every system, one breach could give an attacker the access to the rest of the services as well
