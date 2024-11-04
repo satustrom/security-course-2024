@@ -30,6 +30,8 @@
 
 Reference: Schneier 2015. Applied Cryptography. URL: https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02-sec004. Accessed: 2 November 2024.
 
+---
+
 #### **[Rosenbaum 2019: Grokking Bitcoin](https://learning.oreilly.com/library/view/grokking-bitcoin/9781617294648/OEBPS/Text/kindle_split_011.html#ch02lev1sec1):**
 
 - Digital signature contains three phases: Preparation, signing and verifying. Preparation contains creating the private and public key (and handing over the public key), signing contains creating the sign with the private key, and verifying contains checking the signature with the public key.
@@ -40,6 +42,8 @@ Reference: Schneier 2015. Applied Cryptography. URL: https://learning.oreilly.co
 - Digital signatures could be attacked by stealing the private key and behaving like the original owner of the private key.
 
 Reference: Rosenbaum 2019. Grokking Bitcoin. URL: https://learning.oreilly.com/library/view/grokking-bitcoin/9781617294648/OEBPS/Text/kindle_split_011.html#ch02lev1sec1. Accessed: 3 November 2024
+
+---
 
 #### **[Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg](https://terokarvinen.com/2023/pgp-encrypt-sign-verify/):**
 
