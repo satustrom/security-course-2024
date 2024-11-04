@@ -28,6 +28,8 @@
 - In order sequence to be cryptographically secure pseudo-random it should also be unpredictable and computationally infeasible to predict the upcoming random bits.
 - According to O'reilly, The sequence is real random only if it also cannot be reliably reproduced.
 
+Reference: Schneier 2015. Applied Cryptography. URL: https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02-sec004. Accessed: 2 November 2024.
+
 #### **[Rosenbaum 2019: Grokking Bitcoin](https://learning.oreilly.com/library/view/grokking-bitcoin/9781617294648/OEBPS/Text/kindle_split_011.html#ch02lev1sec1):**
 
 - Digital signature contains three phases: Preparation, signing and verifying. Preparation contains creating the private and public key (and handing over the public key), signing contains creating the sign with the private key, and verifying contains checking the signature with the public key.
@@ -37,18 +39,24 @@
 - The keys can be used both ways: The content can also be encrypted with the public key.
 - Digital signatures could be attacked by stealing the private key and behaving like the original owner of the private key.
 
+Reference: Rosenbaum 2019. Grokking Bitcoin. URL: https://learning.oreilly.com/library/view/grokking-bitcoin/9781617294648/OEBPS/Text/kindle_split_011.html#ch02lev1sec1. Accessed: 3 November 2024
+
 #### **[Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg](https://terokarvinen.com/2023/pgp-encrypt-sign-verify/):**
 
 - gpg = GNU privacy guard, generally used to encrypt messages
 - Gpg can be used in command line but also via additional tools for everyday messaging
 - The article also shows an example of sending a encrypted message between two people via command line tools
 
+Reference: Karvinen, T 2023. PGP - Send Encrypted and Signed Message - gpg. URL: https://terokarvinen.com/2023/pgp-encrypt-sign-verify/. Accessed: 3 November 2024.
+
 ## a) Pubkey today
 
 An example of how I have used public key cryptography today:
 
 - Chatting with my friend in Whatsapp
-- When I sent the message, it got encrypted asymmetrically. The message was mixed up using m friend's magic lock (public key) before it got sent over the internet. My friend decrypted it with matching private key. ([Nayak, A, 8.2.2024: Asymmetric Encryption — Whatsapp mechanism](https://medium.com/@anoopnayak1/asymmetric-encryption-whatsapp-mechanism-79d1821e765c#:~:text=When%20you%20send%20a%20message,can%20unlock%20and%20read%20it.))
+- When I sent the message, it got encrypted asymmetrically. The message was mixed up using my friend's magic lock (public key) before it got sent over the internet. My friend decrypted it with matching private key.
+
+Reference: Nayak, A 2024. Asymmetric Encryption — Whatsapp mechanism. URL: https://medium.com/@anoopnayak1/asymmetric-encryption-whatsapp-mechanism-79d1821e765c. Accessed: 3 November 2024.
 
 ## b) Messaging
 
@@ -79,7 +87,7 @@ I used OpenSSL. Satu sent a message to Bob and Bob responded. Here's all the ste
 
 My comments: I feel like OpenSSL is very safe tool to encrypt the files. Additional layer of security was a passphrase that was created when the key pair got created. Whenever the private key was being used, the passphrase was needed to input first. My only worry is the step when the public keys get sent to each other, someone could perhaps steal it and decrypt the messages.
 
-Reference: [Kamathe, G, 29.4.2021: Encrypting and decrypting files with OpenSSL](https://opensource.com/article/21/4/encryption-decryption-openssl)
+Reference: Kamathe, G 2021. Encrypting and decrypting files with OpenSSL. URL: https://opensource.com/article/21/4/encryption-decryption-openssl. Accessed: 3 November 2024.
 
 ## d) Eve and Mallory
 
@@ -95,7 +103,7 @@ PGP protecting against passive eavesdroppers and active interferers:
 - Message's integrity and authenticity can be verified with digital signatures => signature won't validate if altered
 - Modifications of the messages can be marked with hash functions => will notice if some unwanted modifications happen
 
-Reference: OpenAI's ChatGPT. (2023). Explanation of PGP security mechanisms. Accessed: 3.11.2024.
+Reference: OpenAI's ChatGPT 2023. Explanation of PGP security mechanisms. Accessed: 3 November 2024.
 
 ## f) Password management (e part missing?)
 
@@ -104,9 +112,12 @@ I used KeePass XC since I've been using it in the past.
 1. Download KeePass from their website
 2. Open the app, create a database and add a strong password. This password should be long and hard to guess since all the rest of the passwords will be stored behind it in the system. :)
 3. By clicking "Add entry" you can store new passwords. If you click the dice in the password field, KeePass XC gives you a random password with the rules you want.
-4. After adding the passwords in the system you only need to rememeber the password to the KeePass XC and all the other services can have secure, hard-to-guess and rather unique passwords.
+4. After adding the passwords in the system you only need to rememeber the password to the KeePass XC and all the other services will have secure, hard-to-guess and rather unique passwords.
+5. In order to use passwords, login to the KeePass XC (with the password or if enabled,touch ID) and copy the password you need.
 
 A couple of benefits came to my mind:
 
 - With password manager, the passwords can be long and complicated since the user does not need to remember it. Also this way user won't use his/her personal information as a part of the password, such as birthdate or phone number etc. This makes password guessing harder for attacker
 - If the passwords weren't different in every system, one breach could give an attacker the access to the rest of the services as well
+
+## g) Done
