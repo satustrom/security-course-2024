@@ -50,6 +50,40 @@ After that I ran a command cat solved. And the answer seems to be "admin"
 My best guess would be to use the sha356sum to create a password against dictionary attack. I will create such a hash out of word summer and check.
 echo -n 'summer'|sha256sum
 Hash created was e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689
+I tried to crack it with hashcat, but did not succeed, ran into an error that I could not solve 
+
+Hash 'e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689': Token length exception
+
+* Token length exception: 1/1 hashes
+  This error happens if the wrong hash type is specified, if the hashes are
+  malformed, or if input is otherwise not as expected (for example, if the
+  --username option is used but no username is present)
+
+Then I realized that I should check hash id first
+
+hashid -m e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689
+Analyzing 'e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689'
+[+] Snefru-256 
+[+] SHA-256 [Hashcat Mode: 1400]
+[+] RIPEMD-256 
+[+] Haval-256 
+[+] GOST R 34.11-94 [Hashcat Mode: 6900]
+[+] GOST CryptoPro S-Box 
+[+] SHA3-256 [Hashcat Mode: 5000]
+[+] Skein-256 
+[+] Skein-512(256) 
+
+I probbly need to use the Hashcat mode 1400
+
+hashcat -m 1400 'e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689' rockyou.txt -o solved
+
+After a while hashcat was able to solve the hash. Running cat solved gave me an answer
+
+e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689:summer
+
+I will change my answer that in order to create a password against the dictionary attack is to use a password manager, such as KeePass, that will create a password that is not any recognizable word like summer.
+
+
 
 
 
