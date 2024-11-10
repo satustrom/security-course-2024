@@ -36,3 +36,20 @@ I changed one letter (dot to question mark) in a file and the new hash was:
 Now when comparing the hashes, they are totally different. I cannot find any similarities between them.
 
 ## c) Hashcat
+I installed Hashcat and practised like in the article mentioned in the summary section. Heres the proof
+
+![Screenshot_2024-11-10_18-09-09](https://github.com/user-attachments/assets/50854237-f352-4edc-831e-2243b80e2ba5
+
+## d)  Dictionary attack
+
+I used Hashcat to crack the hash with the following command: hashcat -m 0 '21232f297a57a5a743894a0e4a801fc3' rockyou.txt -o solved
+After that I ran a command cat solved. And the answer seems to be "admin"
+21232f297a57a5a743894a0e4a801fc3:admin
+
+## e) How can you make a password that's protected against a dictionary attack?
+My best guess would be to use the sha356sum to create a password against dictionary attack. I will create such a hash out of word summer and check.
+echo -n 'summer'|sha256sum
+Hash created was e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689
+
+
+
