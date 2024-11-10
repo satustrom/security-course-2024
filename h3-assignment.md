@@ -24,3 +24,15 @@ Reference: Schneier 2015. Applied Cryptography. URL: https://learning.oreilly.co
 -
 
 Reference: Karvinen 2020. Cracking Passwords with Hashcat. URL: https://terokarvinen.com/2022/cracking-passwords-with-hashcat/. Accessed: 10 November 2024.
+
+## a. Billion dollar busywork
+I manually tried quite many different combinations but finally the word "hello asdfs" created a hash that started with zero. 
+
+## b) Compare hash
+I created a file and made a hash of it. Created hash was:
+`c5f96b8b456c0e432ea3f63eaf68c64c555c38bb2eb838710675d296f002cfc7`.
+I changed one letter (dot to question mark) in a file and the new hash was:
+`78a893ede6f156e0a4aacb1125a0de15dfda7ed6b034a60f8e9f7d5c6872f7ba`
+Now when comparing the hashes, they are totally different. I cannot find any similarities between them.
+
+## c) Hashcat
