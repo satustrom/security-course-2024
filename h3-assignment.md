@@ -21,14 +21,17 @@ Reference: Schneier 2015. Applied Cryptography. URL: https://learning.oreilly.co
 
 - Instead of storing original passwords, systems store the hash of them
 - Hashcat is a hash cracking program
--
 
 Reference: Karvinen 2020. Cracking Passwords with Hashcat. URL: https://terokarvinen.com/2022/cracking-passwords-with-hashcat/. Accessed: 10 November 2024.
 
 ## a. Billion dollar busywork
-I manually tried quite many different combinations but finally the word "hello asdfs" created a hash that started with zero. 
+
+I manually tried quite many different combinations but finally the word "hello asdfs" created a hash that started with zero.
+
+![Sha256sum](sha256sum.png)
 
 ## b) Compare hash
+
 I created a file and made a hash of it. Created hash was:
 `c5f96b8b456c0e432ea3f63eaf68c64c555c38bb2eb838710675d296f002cfc7`.
 I changed one letter (dot to question mark) in a file and the new hash was:
@@ -36,54 +39,70 @@ I changed one letter (dot to question mark) in a file and the new hash was:
 Now when comparing the hashes, they are totally different. I cannot find any similarities between them.
 
 ## c) Hashcat
+
 I installed Hashcat and practised like in the article mentioned in the summary section. Heres the proof
 
-![Screenshot_2024-11-10_18-09-09](https://github.com/user-attachments/assets/50854237-f352-4edc-831e-2243b80e2ba5
+![Hashcat](hashcat.png)
 
-## d)  Dictionary attack
+## d) Dictionary attack
 
-I used Hashcat to crack the hash with the following command: hashcat -m 0 '21232f297a57a5a743894a0e4a801fc3' rockyou.txt -o solved
+I used Hashcat to crack the hash with the following command:
+
+```
+hashcat -m 0 '21232f297a57a5a743894a0e4a801fc3' rockyou.txt -o solved
+```
+
 After that I ran a command cat solved. And the answer seems to be "admin"
+
+```
 21232f297a57a5a743894a0e4a801fc3:admin
+```
 
 ## e) How can you make a password that's protected against a dictionary attack?
-My best guess would be to use the sha356sum to create a password against dictionary attack. I will create such a hash out of word summer and check.
+
+I was thinking of how well using sha256sum would protect the password. I created a hash out of word summer:
+
+```
 echo -n 'summer'|sha256sum
-Hash created was e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689
-I tried to crack it with hashcat, but did not succeed, ran into an error that I could not solve 
+```
 
-Hash 'e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689': Token length exception
+Hash created was:
 
-* Token length exception: 1/1 hashes
-  This error happens if the wrong hash type is specified, if the hashes are
-  malformed, or if input is otherwise not as expected (for example, if the
-  --username option is used but no username is present)
+```
+e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689
+```
 
-Then I realized that I should check hash id first
+I checked the hash id with command:
 
+```
 hashid -m e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689
+```
+
+and got this result:
+
+```
 Analyzing 'e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689'
-[+] Snefru-256 
+[+] Snefru-256
 [+] SHA-256 [Hashcat Mode: 1400]
-[+] RIPEMD-256 
-[+] Haval-256 
+[+] RIPEMD-256
+[+] Haval-256
 [+] GOST R 34.11-94 [Hashcat Mode: 6900]
-[+] GOST CryptoPro S-Box 
+[+] GOST CryptoPro S-Box
 [+] SHA3-256 [Hashcat Mode: 5000]
-[+] Skein-256 
-[+] Skein-512(256) 
+[+] Skein-256
+[+] Skein-512(256)
+```
 
-I probbly need to use the Hashcat mode 1400
+I probably need to use the Hashcat mode 1400 so I ran this command:
 
+```
 hashcat -m 1400 'e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689' rockyou.txt -o solved
+```
 
-After a while hashcat was able to solve the hash. Running cat solved gave me an answer
+After a while hashcat was able to solve the hash successfully. Running `cat solved` gave me an answer
 
+```
 e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689:summer
+```
 
-I will change my answer that in order to create a password against the dictionary attack is to use a password manager, such as KeePass, that will create a password that is not any recognizable word like summer.
-
-
-
-
-
+So, even sha256 did not help when the password itself is weak. My answer to this question is that in order to create as strong password as possible against the dictionary attack is to use a password manager, such as KeePass, and use it to create a random password that will not have any recognizable word (like "summer").
