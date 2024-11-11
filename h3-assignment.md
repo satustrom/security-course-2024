@@ -110,4 +110,14 @@ So, even sha256 did not help when the password itself is weak. My answer to this
 
 ## j) John
 
-This task is missing as I just noticed one more mandatory task after submitting. Work in progress :)
+I followed the instructions and was able to compile:
+![Screenshot_2024-11-11_15-18-22](https://github.com/user-attachments/assets/ab918b37-dbe6-4473-9fd9-60791184206b)
+
+## k) Crack file password
+
+I followed the instructions and was able to solve the password:
+
+![Screenshot_2024-11-11_15-24-02](https://github.com/user-attachments/assets/bfddcee1-8488-48eb-a86e-047e113d2619)
+
+Reference: Karvinen 2023. Crack File Password With John. URL: https://terokarvinen.com/2023/crack-file-password-with-john/. Accessed: 11 November 2024.
+
