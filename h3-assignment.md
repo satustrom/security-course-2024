@@ -106,3 +106,8 @@ e83664255c6963e962bb20f9fcfaad1b570ddf5da69f5444ed37e5260f3ef689:summer
 ```
 
 So, even sha256 did not help when the password itself is weak. My answer to this question is that in order to create as strong password as possible against the dictionary attack is to use a password manager, such as KeePass, and use it to create a random password that will not have any recognizable word (like "summer").
+
+
+## j) John
+
+This task is missing as I just noticed one more mandatory task after submitting. Work in progress :)
