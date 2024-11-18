@@ -48,12 +48,50 @@
 Reference: Nakamoto 2008. Bitcoin: A Peer-to-Peer Electronic Cash System. URL: https://bitcoin.org/bitcoin.pdf. Accessed: 17 November 2024.
 
 ## a. Wallet
+I followed the commands in the Tips sections and was able to create a wallet 
+
+![image](https://github.com/user-attachments/assets/17a44bba-bc68-4931-9150-617f91838e1c)
+
+
 
 ## b. Faucet
 
+I was able to get money 
+![image](https://github.com/user-attachments/assets/e6e14377-24ed-4616-a6ad-b02c11045b2d)
+
+In order to receive the money, I created a receive request and copied the link to the testnet faucet website. See in the bottom that there are money received
+
+![image](https://github.com/user-attachments/assets/a4bcd995-030d-4957-bac2-21dbb9e32dc2)
+
+
+![image](https://github.com/user-attachments/assets/b9c3a524-78c4-4a3a-8ab2-60329bb5118a)
+![image](https://github.com/user-attachments/assets/8b7d19ff-276a-4a4f-9031-2eba7101ae9a)
+
+
 ## c. Giveaway
+Created a request
+![image](https://github.com/user-attachments/assets/a838aac0-e228-4b94-9a81-561b308d0781)
+![image](https://github.com/user-attachments/assets/65de34c2-5d3b-4d66-a865-9d2d2894f718)
+![image](https://github.com/user-attachments/assets/f8041aa3-8f12-4098-a5b5-a4d028d0a6d3)
+
+Lahetetty
+![image](https://github.com/user-attachments/assets/7b306fa0-1e6d-4ad8-9280-402180c98d64)
+
+Vastaanotettu toiselle lompakolle
+![image](https://github.com/user-attachments/assets/15c3657b-fd97-495e-927f-48975823a62e)
 
 ## d. Recycle
+
+![image](https://github.com/user-attachments/assets/7d1d9d54-825c-4e81-ae65-c24a98a94550)
+
+I copied the link in the testnet site to send the money back
+![image](https://github.com/user-attachments/assets/a2873ffd-f5f2-473e-9ae6-109d8f5e5d3d)
+
+![image](https://github.com/user-attachments/assets/2a25bafb-c463-44b6-a1ff-4d6699266bb5)
+
+Send also the rest back..
+![image](https://github.com/user-attachments/assets/1ea843b2-2ac0-4141-8d19-bf4deb5edd98)
+
 
 ## e. Explorer
 
