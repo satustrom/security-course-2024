@@ -102,4 +102,51 @@ Now when it finally worked, I decided to send the rest of my bitcoins and my wal
 
 ## e. Explorer
 
+I tried to find some interesting bitcoin blocks, but at least ChatGPT could not help me, all its example transactions could not be found from the explorers (I tried blockchair, blockchain and bitaps sites). So I gave up and explored one basic example..:
+
+I used [blockchain.com](https://www.blockchain.com/explorer) and chosed one random block [id #870884](https://www.blockchain.com/explorer/blocks/btc/870884), and random transaction [hash e07bc8c0e06d27b1097b059fb5b536c11a30af9dba4d874be322b98037ce702a](https://www.blockchain.com/explorer/transactions/btc/e07bc8c0e06d27b1097b059fb5b536c11a30af9dba4d874be322b98037ce702a)
+
+I found Blockchain very clear tool and it also gave descriptions on all the fields so I was able to understand the information better.
+
+**Block information**
+
+| Field         | Description                                                     | Value                                                            |
+| ------------- | --------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Hash          | Unique identifier to the block                                  | 0000000000000000000138c3e0803889c50a59d34d94ef9ab16002ec35ddd864 |
+| Distance      | Time since the block was mined                                  | 1h 25m 0s                                                        |
+| BTC           | Bitcoins sent on all transactions of the block                  | 1,549.3715                                                       |
+| Value         | Value of all transactions when the block was mined              | 143,195,873 $                                                    |
+| Value today   | Present value                                                   | 142,115,232 $                                                    |
+| Average Value | Average value of a transaction                                  | 0.3172341314 BTC                                                 |
+| Input Value   | All transactional input values summed together                  | 1,549.42 BTC                                                     |
+| Output Value  | All transactional output values summed together                 | 1,552.54 BTC                                                     |
+| Transactions  | Amount of transactions in the block                             | 4,884                                                            |
+| Fees          | Transaction fees rewarded to the miner for calculating the hash | 0.04673086 BTC                                                   |
+| Average fee   | Average fee amount/transaction on the block                     | 0.00000957                                                       |
+| Depth         | How deep in the confirmed blocks                                | 1                                                                |
+| Size          | Total size of the bloc                                          | 1,539,788                                                        |
+| Nonce         | Random value that can be adjusted to satisfy the Proof-Of-Work  | 1,965,728,596                                                    |
+| Height        | Number of blocks connected on the blockchain                    | 870,884                                                          |
+| Miner         | Who confirmed block's transactions                              | AntPool                                                          |
+
+**Sample transaction**
+
+| Field   | Description                                     | Value                                                            |
+| ------- | ----------------------------------------------- | ---------------------------------------------------------------- |
+| Hash ID | Unique identifier to the transaction            | e07bc8c0e06d27b1097b059fb5b536c11a30af9dba4d874be322b98037ce702a |
+| Amount  | How many bitcoins got transferred               | 0.01917652 BTC, 1,753.35 $                                       |
+| Fee     | Total fees paid to process transaction          | 0.00144170 BTC                                                   |
+| From    | How many inputs                                 | 15 inputs                                                        |
+| To      | How many outputs                                | 2 inputs                                                         |
+| Time    | When transaction was broadcasted to the network | 18 Nov 2024 05:57:13                                             |
+
+Here's more information about the inputs and outputs as it was a bit unclear to me:
+
+- UTXO = Unsppent transaction output
+- Each input includes a reference to previous UTXO combined with a cryptographic digital signature
+- Digital signature is generated using the sender’s private key. It is a proof that the sender has the right to spend the bitcoin
+- Output defines where the bitcoin is going, including the amount of bitcoin to be transferred and rules how the receiver can spend them
+
+Reference: Theedtron, 2024. Bitcoin transactions for dummies. URL: https://medium.com/@theedtron/bitcoin-transactions-for-dummies-fd85e17c31b9. Accessed: 18 November 2024.
+
 ## f. RogeCoin
