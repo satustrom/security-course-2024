@@ -48,50 +48,57 @@
 Reference: Nakamoto 2008. Bitcoin: A Peer-to-Peer Electronic Cash System. URL: https://bitcoin.org/bitcoin.pdf. Accessed: 17 November 2024.
 
 ## a. Wallet
-I followed the commands in the Tips sections and was able to create a wallet 
+
+I followed the commands in the [Tips section](https://terokarvinen.com/trust-to-blockchain/#homework) and was able to create a wallet called `satus_default_wallet`:
 
 ![image](https://github.com/user-attachments/assets/17a44bba-bc68-4931-9150-617f91838e1c)
 
-
-
 ## b. Faucet
 
-I was able to get money 
-![image](https://github.com/user-attachments/assets/e6e14377-24ed-4616-a6ad-b02c11045b2d)
-
-In order to receive the money, I created a receive request and copied the link to the testnet faucet website. See in the bottom that there are money received
+In order to receive the money, I created a receive request in Electrum Testnet and copied the address:
 
 ![image](https://github.com/user-attachments/assets/a4bcd995-030d-4957-bac2-21dbb9e32dc2)
 
+Then I went to the [Testnet faucet](https://coinfaucet.eu/en/btc-testnet/) website and pasted the address there. I got a confirmation that the bitcoin was transferred:
+
+![image](https://github.com/user-attachments/assets/e6e14377-24ed-4616-a6ad-b02c11045b2d)
+
+And indeed, I saw some bitcoins in my wallet:
 
 ![image](https://github.com/user-attachments/assets/b9c3a524-78c4-4a3a-8ab2-60329bb5118a)
 ![image](https://github.com/user-attachments/assets/8b7d19ff-276a-4a4f-9031-2eba7101ae9a)
 
-
 ## c. Giveaway
-Created a request
-![image](https://github.com/user-attachments/assets/a838aac0-e228-4b94-9a81-561b308d0781)
+
+I decided to give some bitcoins to my other wallet as I was not sure how I could send it to someone else. Creating another wallet called `wallet_1` was very easy but when sending the bitcoins, I got a lot of issues. The system was warning about the fees and even after raising the fees, the transaction ended up in error, saying that the fees were too low. Finally I was able to create a local transaction, which was visible in the both wallets' histories and the amount of bitcoins got updated too.
+
+Bitcoins left from `satus_default_wallet`:
+
 ![image](https://github.com/user-attachments/assets/65de34c2-5d3b-4d66-a865-9d2d2894f718)
+
+The transaction:
+
 ![image](https://github.com/user-attachments/assets/f8041aa3-8f12-4098-a5b5-a4d028d0a6d3)
 
-Lahetetty
-![image](https://github.com/user-attachments/assets/7b306fa0-1e6d-4ad8-9280-402180c98d64)
+Bitcoins arrived to the `wallet_1`:
 
-Vastaanotettu toiselle lompakolle
 ![image](https://github.com/user-attachments/assets/15c3657b-fd97-495e-927f-48975823a62e)
 
 ## d. Recycle
 
+First I copied the Testnet address from the same website I got the bitcoins originally from:
+
 ![image](https://github.com/user-attachments/assets/7d1d9d54-825c-4e81-ae65-c24a98a94550)
 
-I copied the link in the testnet site to send the money back
+I pasted the address in Electrum, and tried to send some of my bitcoins. Finally succeeded but as you can see from the "Send queue", I had tried already quite many times. Finally changing the network (from Tools), made it possible to send..:
 ![image](https://github.com/user-attachments/assets/a2873ffd-f5f2-473e-9ae6-109d8f5e5d3d)
+
+History, bitcoins left:
 
 ![image](https://github.com/user-attachments/assets/2a25bafb-c463-44b6-a1ff-4d6699266bb5)
 
-Send also the rest back..
+Now when it finally worked, I decided to send the rest of my bitcoins and my wallet is empty:
 ![image](https://github.com/user-attachments/assets/1ea843b2-2ac0-4141-8d19-bf4deb5edd98)
-
 
 ## e. Explorer
 
