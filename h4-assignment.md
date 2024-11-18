@@ -150,3 +150,40 @@ Here's more information about the inputs and outputs as it was a bit unclear to 
 Reference: Theedtron, 2024. Bitcoin transactions for dummies. URL: https://medium.com/@theedtron/bitcoin-transactions-for-dummies-fd85e17c31b9. Accessed: 18 November 2024.
 
 ## f. RogeCoin
+
+**1. Investing in chryptocurrency is the same as gambling (0:52)**
+
+Support:
+
+- To my experience, the future of cryptocurrency is very hard to predict and it's very hard to say if you will win or lose, just like in gambling
+
+Challenge:
+
+- Gambling is based on a chance, while cryptocurrency is based on cryptography
+- Gambler is playing against the casino house, investor in cryptocurrency is playing against other people that has approx the same amout of money
+
+**2. You will lose your cryptos if you forget your wallet password (2:53)**
+
+Support:
+
+- If you don't have any crucial information about the wallet, then indeed the cryptos will be lost. But this is nothing new. For example, to my understanding, there is no way to log in to password manager service if you lose your master password.
+
+Challenge:
+
+- There still are multiple ways to recover the passoword if you have some necessary information like encrypted wallet backup file or a device that has the wallet app installed (KeyChainX, 2024)
+- I have invested in Bitcoin via Coinmotion service and there I don't need to remember any password, just login with bank acccount
+
+**3. Like all good currencies, cryptocurrencies should be hoarded forever (3:43)**
+
+Support:
+
+- Some Bitcoin investors believe that the cryptocurrency will increase the value over the long term because its supply is fixed. The supply of Bitcoin is fewer than 21 million coins, on the other hand, most other currencies can be printed if central bankers decide so (Bylund, 2023)
+
+Challenge:
+
+- Just to check the past rates of Bitcoin, or any investment product, they will have ups and downs. Instead of keeping the cryptos forever, I think it's wise to keep an eye on rates and plan the correct timing of selling or buying more
+- To my mind there is no investment that should kept forever :D
+
+References:
+KeyChainX 2024. How to recover lost Bitcoin wallet Password? URL: https://keychainx.medium.com/how-to-recover-lost-bitcoin-passwords-c34c42ee6f17. Accessed: 18 November 2024.
+Bylund 2023. Is Cryptocurrency a Good Investment? URL: https://www.fool.com/investing/stock-market/market-sectors/financials/cryptocurrency-stocks/is-cryptocurrency-good-investment/. Accessed: 18 November 2024.
