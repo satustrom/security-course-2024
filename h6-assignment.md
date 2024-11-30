@@ -17,3 +17,12 @@
 
 5. I lost many screenshots and comments im between since my virtual machine crashed before I was able to commit the changes in this file
 
+6. I had to move out from virtual machine as it did not have enough power to start and also all my downloads disappeared so I had to start all over again
+
+7. Now I installed the TOR for Windows, and opened it:
+![image](https://github.com/user-attachments/assets/07dc68f0-1603-41c3-94bd-65954b12c807)
+
+8. After clicking the button the TOR opened just like that:
+![image](https://github.com/user-attachments/assets/a8dd935c-0fd5-4068-9038-64bb76523e15)
+
+ 
