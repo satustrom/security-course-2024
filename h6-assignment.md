@@ -25,4 +25,17 @@
 8. After clicking the button the TOR opened just like that:
 ![image](https://github.com/user-attachments/assets/a8dd935c-0fd5-4068-9038-64bb76523e15)
 
- 
+**search engine for onion sites**
+ DuckDuckGo is being used as a search engine in Tor:
+![image](https://github.com/user-attachments/assets/9e6136fc-5318-45dd-b3dd-db7f40cc202c)
+
+**human rights or civil rights organization**
+I searched from DuckDuckGo and clicked Amnesty, the browser suggested me to use onion site so I did that
+
+![image](https://github.com/user-attachments/assets/894d5ce8-bd2d-4fb3-adc1-09ce14f35b35)
+
+**marketplace**
+**fraud**
+**forum**
+**a well known organization (with regular postal addresses, offices or similar presence outside darknet)**
+
