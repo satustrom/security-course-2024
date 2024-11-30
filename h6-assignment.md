@@ -15,3 +15,5 @@
 ![image](https://github.com/user-attachments/assets/06202b55-ac27-459d-9faf-16218733b1eb)
 
 
+5. I lost many screenshots and comments im between since my virtual machine crashed before I was able to commit the changes in this file
+
