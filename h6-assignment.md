@@ -28,6 +28,8 @@
 **search engine for onion sites**
  DuckDuckGo is being used as a search engine in Tor:
 ![image](https://github.com/user-attachments/assets/9e6136fc-5318-45dd-b3dd-db7f40cc202c)
+Another one is Ahmia
+![image](https://github.com/user-attachments/assets/29f75866-32c3-45aa-973c-1bb3d967b5c2)
 
 **human rights or civil rights organization**
 I searched from DuckDuckGo and clicked Amnesty, the browser suggested me to use onion site so I did that
@@ -35,7 +37,28 @@ I searched from DuckDuckGo and clicked Amnesty, the browser suggested me to use 
 ![image](https://github.com/user-attachments/assets/894d5ce8-bd2d-4fb3-adc1-09ce14f35b35)
 
 **marketplace**
+Found this site that has onion links to marketplaces
+![image](https://github.com/user-attachments/assets/22743509-6001-434f-94a3-9056cbb1158d)
+None of those links worked so I opened AHMIA searvh engine and searched from there
+
+Found it from ahmia
+![image](https://github.com/user-attachments/assets/eeb36f70-cb83-40b5-8a4e-c464a3636fed)
+
 **fraud**
+
+
 **forum**
+Searching from Ahmia I found this "hackers room", doesnt seem to be that popular since only one online, maybe its me
+![image](https://github.com/user-attachments/assets/67737845-f2b2-4da9-a0d7-86c5bfbedc19)
+
+
 **a well known organization (with regular postal addresses, offices or similar presence outside darknet)**
+
+There were this button to move to onion site
+![image](https://github.com/user-attachments/assets/a31b7be1-1ce8-40c4-8352-0dbebaef165c)
+
+I think New York times fits for this section
+![image](https://github.com/user-attachments/assets/3527c4e9-40c7-43fe-bdbb-389919937442)
+
+
 
