@@ -2,6 +2,72 @@
 
 ## X. Summaries
 
+#### **[Dingledine, Mathewson and Syverson 2004: Tor: The Second-Generation Onion Router](https://css.csail.mit.edu/6.858/2022/readings/tor-design.pdf):**
+
+**3. Design goals and assumptions**
+
+**Goals**: Tor aims to prevent attackers from connecting users to their communications while also evolving based on different needs
+
+- Deployability: Must be affordable, easy to implement, and not burden operators, while not requiring non-anonymous parties, like websites, to run special software
+- Usability: Must be easy to use to ensure more users and better anonymity. Tor should work with familiar applications, avoid slowdowns, require minimal setup, and be compatible with common platforms without needing OS changes.
+- Flexibility: The protocol should be flexible and well-defined, allowing Tor to support future research without redesigning core features
+- Simple design: The protocol should be straightforward and well-understood, avoiding unnecessary complexity to ensure stability, security, and ease of deployment
+
+**Non-goals**: Some goals are deferred due to not being solved or being fixed somewhere else
+
+- Not peer-to-peer: Tor avoids fully decentralized peer-to-peer systems, which still face many unresolved challenges, especially with adversary-controlled servers.
+- Not secure against end-to-end attacks: Tor doesn’t fully solve end-to-end timing or intersection attacks
+- No protocol normalization: Tor doesn’t normalize protocols like Privoxy or Anonymizer. To hide client differences or protect against identity leaks, Tor must be used with an external proxy
+- Not steganographic: Tor does not hide the identities of users connecting to the network.
+
+**Threat Model**: Tor assumes an adversary who can observe, modify, delay, or delete traffic, control some onion routers, or compromise others. The goal is to prevent traffic analysis attacks, where an attacker uses patterns to link users or learn about their behavior. While Tor does not fully protect against strong adversaries, it focuses on defending against attacks like traffic correlation, active manipulation, and attempts to undermine network reliability.
+
+Refererence: Dingledine, Mathewson and Syverson 2004. Tor: The Second-Generation Onion Router. URL: https://css.csail.mit.edu/6.858/2022/readings/tor-design.pdf. Accessed: 2 December 2024.
+
+#### **[Karunanayake, Ahmed, Malaney, Islam and Jha 2021: Tor: De-anonymisation attacks on tor: A survey](https://ieeexplore.ieee.org/ielx7/9739/9621320/09471821.pdf):**
+
+**Abstract**:
+
+- Tor is popular for protecting online privacy but is also misused for illegal activities. This survey reviews attacks on Tor, techniques for de-anonymising users and services, and explores improvements to prevent such attacks
+
+**Introduction**:
+
+- As privacy concerns grow, especially for whistle-blowers and citizens in repressive regimes, anonymous networks have become crucial. Early systems, like Babel, had too high latency, paving the way for faster alternatives
+- Tor = The Onion Router project, the most popular low latency anonymity network (so far)
+- Tor's main vulnerability is de-anonymisation, and researchers have worked to improve its security in response. As Tor has grown, security improvements have protected it against many legacy attacks.
+
+**Background**:
+
+- Onion Proxy (OP): A small software installed on the user's device that communicates with directory servers, connects to the Tor network, and manages connections for the user's applications. Also called as Tor client
+- Directory Servers (DS): Trusted servers which maintain up-to-date information about the networks. OPs download this information to select relays and establish communication circuits
+- Entry Node/Guard: The first relay a Tor client connects to and it knows the client’s IP address. Early attacks targeted entry nodes to de-anonymise users. To reduce this risk, Tor introduced guard nodes—trusted relays selected by the client for multiple circuits, reducing the chance of an adversary-controlled entry node being chosen. Guard nodes are assigned based on some factors like network experience, and become eligible after eight days in the Tor network
+- Exit Node: The final relay in the Tor circuita and it knows the IP address of the destination server. Since the last layer of Tor encryption is removed here (unless end-to-end encryption like TLS is used), a malicious exit node can potentially observe the traffic passing through it
+- Hidden Services (HS) = Onion Services. Tor provides anonymity to users but doesn’t hide the identity of websites they visit. To address this, HS allows websites to be hosted within the Tor network, with addresses ending in .onion. These services protect both the user and the website’s identity. However, HS has also attracted illegal activities, leading law enforcement agencies to target and shut down these services
+- Introduction Points: Random nodes selected by a HS to register with Tor. Multiple points are used to prevent DoS (Denial of Service) attacks, and they don't know the HS’s IP, as connections are routed through a Tor circuit
+- Rendezvous Points (RPs): A random Tor node selected by the client to connect through a Tor circut, ensuring the RP doesn’t know the client's identity
+- Bridges: To prevent censorship by service providers, bridges are Tor relays not listed in the public directory. They replace guard nodes in a circuit and are provided in limited numbers to clients. Bridges allow encrypted connections to censored Tor relays, without the need for middle or exit relays
+
+**Standard Tor Circuit Establishment**:
+Tor uses 512-byte fixed-length cells for communication to make traffic analysis harder. There are two types: control cells and relay cells. Control cells issue commands like create or destroy, while relay cells carry end-to-end data and include a relay header with a stream ID, checksum, payload length, and relay command. The header and payload are encrypted using AES-CTR with symmetric keys from Diffie-Hellman key exchange (DHKE)
+
+**Circuit Establishment for Tor HS**:
+To connect to a Hidden Service (HS), the HS selects introduction points and advertises its service descriptor via the Directory Server (DS). Users find the HS’s onion address and the OP fetches the descriptor. The OP establishes a circuit to a Rendezvous Point (RP) and sends a message to the HS via the introduction point. The HS creates a circuit to the RP, and communication occurs over a six-hop circuit, keeping the HS’s identity hidden.
+
+**Figure 6**:
+
+- Figure 6 shows happened attacks on tor
+- There are four main categories: de-anonymisation attacks, network disruption attacks, censorship attacks, and generic attacks. Figure concentrates on de-anonymisation attacks
+- divided into passive (adversary only observes) and active attacks (adversary manipulates the network traffic)
+
+Reference: Karunanayake, Ahmed, Malaney, Islam and Jha 2021. De-anonymisation attacks on tor: A survey. URL: https://ieeexplore.ieee.org/ielx7/9739/9621320/09471821.pdf. Accessed: 2 December 2024.
+
+#### **[Halonen, Ollikainen, Rajala 2023: PhishSticks - The Ethical Hackers tool for BadUSB ](https://www.youtube.com/watch?v=bDzVevtZiWE):**
+
+- PhishStick = a USB stick with a malicious content in it
+- When user connects the stick into the computer, malicious code gets installed and the attacker can e.g. log the keyboard and hence steal sensitive information such as password
+
+Reference: Halonen, Ollikainen, Rajala 2023. PhishSticks - The Ethical Hackers tool for BadUSB. URL: https://www.youtube.com/watch?v=bDzVevtZiWE. Accessed: 2 December 2024.
+
 ## a. Install TOR
 
 1. Googled "tor browser installation"
