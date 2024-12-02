@@ -139,3 +139,27 @@ It doesn't seem to be that popular since there is only one online (me? :D)
 Maybe New York times magazine fits for this section?:
 
 ![image](https://github.com/user-attachments/assets/3527c4e9-40c7-43fe-bdbb-389919937442)
+
+## c) Onion
+
+- Anonymity in Tor works by routing traffic through multiple relays in a layered encryption system, making it difficult for anyone to trace a user's activity back to them. When a user connects to Tor, their traffic is encrypted multiple times with different public keys as it passes through a series of relays. Each relay decrypts one layer of encryption to reveal the next hop, but no relay knows both the origin and destination of the traffic. (Amanda_James_Min, 2020)
+
+- Tor uses public key cryptography for this process, particularly with Diffie-Hellman key exchange to establish shared symmetric keys between relays. For the actual encryption, Tor uses AES in Counter mode (AES-CTR) to encrypt the data, ensuring its confidentiality and integrity. The traffic is split into fixed-length cells, each containing a small piece of the data and encrypted headers that route it correctly. This layered encryption and random routing make it extremely difficult for an adversary to track the user's identity or the sites they visit. (Karunanayake, Ahmed, Malaney, Islam and Jha, 2021)
+
+References:
+Amanda_James_Min 2020. Understanding the Tor Network. URL: https://medium.com/systems-and-network-security/understanding-the-tor-network-b9bf5ffca226. Accessed: 2 December 2024.
+
+Karunanayake, Ahmed, Malaney, Islam and Jha 2021. De-anonymisation attacks on tor: A survey. URL: https://ieeexplore.ieee.org/ielx7/9739/9621320/09471821.pdf. Accessed: 2 December 2024.
+
+## d) What kind of the threat models could TOR fit?
+
+Tor could for example fit Global active adversary because of its actions to prevent denial of service. In Global active adversary an attacker not only monitors the traffic (passive attack) but also can actively manipulate or disrupt it (e.g., by compromising nodes, injecting traffic, or launching denial-of-service (DoS) attacks). Tor tries to defence these with entry/guard nodes, circuit-based encryption and bridges: entry/guard nodes help mitigate risks where an adversary controls entry points and tries to intercept traffic, circuit-based encryption ensures that even if a node is compromised, the attacker cannot easily compromise the entire network, and bridges help evade censorship by hiding the IP addresses of relays.
+
+Reference:
+Karunanayake, Ahmed, Malaney, Islam and Jha 2021. De-anonymisation attacks on tor: A survey. URL: https://ieeexplore.ieee.org/ielx7/9739/9621320/09471821.pdf. Accessed: 2 December 2024.
+
+## e) Don't stick that stick
+
+- Attacker could for example switch original USB stick with one that has malicious code in it and when it's being connected to the computer, attacker will be able to get into sensitive information, such as passwords, bank accounts, and why not business secrets
+- In my opinion anything could happen with this kind of attack if the victim does not notice anything before it's too late
+- Risk could be mitigated by not using any kind of USB sticks at all since the data can be transferred other ways too
