@@ -30,6 +30,8 @@ How ML is currently being used:
 - Malware Detection: ML models classify and identify malware by analyzing its behavior or characteristics. Supervised learning models can e.g. detect new malware by comparing it with known malware patterns in a training dataset
 - Fraud Detection: ML is used to detect fraudulent activities, particularly in financial transactions. By analyzing transaction patterns, ML can identify suspicious behaviors and flag potential fraud
 
+----
+
 **Evaluation of ML Based Methods That Used in Cybersecurity Field**
 
 I chose some evaluations that I was able to understand without going too deep in the machine learning world:
