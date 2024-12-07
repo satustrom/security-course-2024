@@ -51,5 +51,7 @@ DDoS Mitigation with Multi-Class Classifiers
 - Pros: Achieves 99.81% accuracy in identifying and mitigating DDoS attacks.
 - Cons: Focuses only on certain types of attacks, which may limit its broader applicability.
 
+----
+
 Reference:
 Ozkan-Ozay, M., Akin, E., Aslan, Ö., Kosunalp, S., Iliev, T., Stoyanov, I. and Beloev, I., 2024. A Comprehensive Survey: Evaluating the Efficiency of Artificial Intelligence and Machine Learning Techniques on Cyber Security Solutions. URL: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10403908
