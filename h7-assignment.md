@@ -2,7 +2,8 @@
 
 ## X. Summaries
 
-I spent quite significant amount of time on finding an article that is somewhat interesting, new enough, is peer-reviewed and can be found from JUFO with a number between 1-3. Finally made it and decided to read **[A Comprehensive Survey: Evaluating the Efficiency of Artificial Intelligence and Machine Learning Techniques on Cyber Security Solutions](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10403908)** (JUFO rating 1, released in 2024)
+I spent quite significant amount of time on finding an article that is somewhat interesting, new enough, is peer-reviewed, can be found from JUFO with a number between 1-3 AND is free to read. Many interesting articles were sadly behind a paywall. 
+Finally made it and decided to read **[A Comprehensive Survey: Evaluating the Efficiency of Artificial Intelligence and Machine Learning Techniques on Cyber Security Solutions](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10403908)** (JUFO rating 1, released in 2024, found from Google Scholars)
 
 - As technology becomes more integrated into daily life, it brings conveniences but also increases cybersecurity risks. The rapid growth of data and sophisticated hackers with advanced knowledge make securing systems more challenging.
   - High-profile cyberattack example: Colonial Pipeline Ransomware (2021), A ransomware attack caused fuel shortages in the U.S. by targeting the pipeline's operations.
