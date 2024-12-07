@@ -31,6 +31,7 @@ How ML is currently being used:
 - Fraud Detection: ML is used to detect fraudulent activities, particularly in financial transactions. By analyzing transaction patterns, ML can identify suspicious behaviors and flag potential fraud
 
 **Evaluation of ML Based Methods That Used in Cybersecurity Field**
+
 I chose some evaluations that I was able to understand without going too deep in the machine learning world:
 
 Cloud-based DDoS Attack Detection
