@@ -5,7 +5,7 @@
 I spent quite significant amount of time on finding an article that is somewhat interesting, new enough, is peer-reviewed, can be found from JUFO with a number between 1-3 AND is free to read. Many interesting articles were sadly behind a paywall. 
 Finally made it and decided to read **[A Comprehensive Survey: Evaluating the Efficiency of Artificial Intelligence and Machine Learning Techniques on Cyber Security Solutions](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10403908)** (JUFO rating 1, released in 2024, found from Google Scholars)
 
-Update: I got a feedback that my article was not a review article but here's a screenshot to prove that I used "Review articles" filter on and there were article that I chose...:
+Update: I got a feedback that my article was not a review article but here's a screenshot to prove that I used "Review articles" filter on and there were the article I chose...:
 
 <img width="1089" alt="Screenshot 2024-12-08 at 17 37 05" src="https://github.com/user-attachments/assets/fbae535e-e78b-4b4b-99d9-c574650d196a">
 
